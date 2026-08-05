@@ -1,0 +1,1 @@
+- fix: CSS custom properties for theme support + vendor sync + AGENTS rule
