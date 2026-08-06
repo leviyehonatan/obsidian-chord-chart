@@ -1,0 +1,10 @@
+- docs: comprehensive README covering file types, editing, clipboard, and creation
+- feat: CSS custom properties for all theming, remove JS theme props
+- feat: custom file view for .chart/.ireal with viewer/editor toggle and save support
+- feat: fullscreen mode with requestFullscreen, floating KeyPill, view mode switching
+- feat: in-place iReal code block editing with persistence
+- feat: side-by-side editor layout, add edit/view toggle command
+- fix: CSS custom properties for theme support + vendor sync + AGENTS rule
+- fix: defer code block update to Done, prevent backspace navigation
+- fix: mobile fullscreen fallback overlay + vendor sync
+- fix: simplify save flow — update data, let Obsidian handle persistence
