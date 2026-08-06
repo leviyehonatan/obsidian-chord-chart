@@ -1,0 +1,9 @@
+{
+  "id": "chord-chart",
+  "name": "Chord Chart",
+  "version": "0.1.3",
+  "minAppVersion": "1.8.0",
+  "description": "Render chord charts from iReal Pro links and a human-writable chart format.",
+  "author": "leviyehonatan",
+  "isDesktopOnly": false
+}

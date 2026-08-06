@@ -1,0 +1,1 @@
+- docs: comprehensive README covering file types, editing, clipboard, and creation
