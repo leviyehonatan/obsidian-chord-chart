@@ -1,0 +1,6 @@
+/* Chord Chart — style hooks.
+   Chart CSS is compiled by StyleX and injected at runtime (main.js), so
+   this file only needs app/chrome-level rules. Theme vars that follow
+   Obsidian (--background-primary, --text-normal, …) are referenced from
+   the injected styles. Use .theme-dark / .theme-light here for overrides. */
+:root { --chord-chart-attached: 1; }

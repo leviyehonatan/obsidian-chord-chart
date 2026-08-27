@@ -1,0 +1,31 @@
+name: Create Release
+
+on:
+  push:
+    tags:
+      - '*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Create GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          VERSION="${GITHUB_REF#refs/tags/}"
+          NOTES=$(cat CHANGELOG.md 2>/dev/null || echo "Release $VERSION")
+          if gh release view "$VERSION" &>/dev/null; then
+            gh release upload "$VERSION" main.js manifest.json styles.css --clobber
+            gh release edit "$VERSION" --notes "$NOTES"
+          else
+            gh release create "$VERSION" \
+              --title "$VERSION" \
+              --notes "$NOTES" \
+              main.js manifest.json styles.css
+          fi
